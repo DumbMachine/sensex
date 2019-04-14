@@ -5,11 +5,12 @@ import pandas as pd
 import numpy as np
 from multiprocessing.pool import ThreadPool
 
-class MultiStock:
-    def __init__(self, stock_name, urls, instance_time=False, frame=False, threads=None, time_period= 0):
+class SingleStock:
+    def __init__(self, stock_name, url=None, time_period= 0):
         '''
         Initializing the required vbariables and settings
         options = {
+            'stock_name': "NAME_OF_STOCK" // not the url
             'threads': None,
             more to added....
                     }
@@ -115,3 +116,7 @@ class MultiStock:
     def custom_columns(self):
         # This is the holder function where CUSTOM_COLUMNS will be implemented
         pass
+
+    
+class SingleStock:
+    def __init__(stock_name, time_period, instance_time, full_day, )
